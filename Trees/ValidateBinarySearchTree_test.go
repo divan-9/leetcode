@@ -76,3 +76,31 @@ func TestIsValidBST4(t *testing.T) {
 		t.Fatal("Expected false")
 	}
 }
+
+func TestIsValidBST5(t *testing.T) {
+	input := TreeNode{
+		Val: 5,
+		Left: &TreeNode{
+			Val: 4,
+			Left: &TreeNode{
+				Val: 3,
+			},
+			Right: &TreeNode{
+				Val: 7,
+			},
+		},
+		Right: &TreeNode{
+			Val: 7,
+			Left: &TreeNode{
+				Val: 6,
+			},
+			Right: &TreeNode{
+				Val: 8,
+			},
+		},
+	}
+	res := isValidBST(&input)
+	if res {
+		t.Fatal("Expected false")
+	}
+}

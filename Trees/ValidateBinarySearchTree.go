@@ -22,20 +22,6 @@ func isValid(root *TreeNode, l int, u int) bool {
 	if root.Right != nil && root.Right.Val <= root.Val {
 		return false
 	}
-	return isValid(root.Left, l, min(u, root.Val-1)) &&
-		isValid(root.Right, max(l, root.Val+1), u)
-}
-
-func max(a int, b int) int {
-	if a > b {
-		return a
-	}
-	return b
-}
-
-func min(a int, b int) int {
-	if a > b {
-		return b
-	}
-	return a
+	return isValid(root.Left, l, root.Val-1) &&
+		isValid(root.Right, root.Val+1, u)
 }
