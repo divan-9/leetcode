@@ -1,5 +1,5 @@
 // https://leetcode.com/explore/interview/card/top-interview-questions-easy/96/sorting-and-searching/587/
-package MergeSortedArray
+package SortingAndSearching
 
 func merge(nums1 []int, m int, nums2 []int, n int) {
 	var i, j int

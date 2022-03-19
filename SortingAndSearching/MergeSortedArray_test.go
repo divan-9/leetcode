@@ -1,4 +1,4 @@
-package MergeSortedArray
+package SortingAndSearching
 
 import (
 	"reflect"
